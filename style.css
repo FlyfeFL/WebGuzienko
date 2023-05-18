@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+textarea {
+    resize: none;
+    padding: 20px;
+    height: 400px;
+}
+.wrapper{
+    display: flex;
+    padding: 100px 1%;
+}
+form.check > *:not(.check-item){
+    opacity: 0;
+    visibility: hidden;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+.wrapper form{
+    width: 80%;
+    border: 1px solid lightgrey;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper form input:focus{
+    outline: none;
+    background: rgb(248, 248, 248);
+}
+.wrapper form input[type=text]{
+    position: relative;
+    height: 40px;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px  solid lightgray;
+}
+.wrapper form > *{
+    margin-bottom: 20px;
+}
+details{
+    position: relative;
+    z-index: 1;
+    transition: all .2s;
+}
+details input{
+    width: 100%;
+    z-index: -1;
+}
+summary::marker{
+    content: '';
+}
+.select{
+    color: #565656;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    background: whitesmoke;
+    list-style-position: inside;
+}
+.select li{
+    font-size: 14px;
+    cursor: pointer;
+}
+.radio-wrap {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px  solid lightgray;
+    padding-bottom: 20px;
+}
+.radio-wrap label{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border: 1px solid transparent;
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.radio-wrap label img{
+    width: 64px;
+}
+.radio-wrap label.checked{
+    border: 1px solid grey;
+    background: #c8ff87;
+}
+.radio-wrap label input{
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.wrapper form button{
+    width: 300px;
+    padding: 20px;
+    border: 1px solid grey;
+    background: #c8ff87;
+    border-radius: 5px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+.wrapper form .button-wrapper{
+    align-self: flex-end;
+    width: 100%;
+}
+.wrapper form button.grey{
+    background: lightgray;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.checkbox input{
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .radio-wrap label img{
+        width: 30px;
+    }
+    .wrapper {
+        padding: 40px 1%;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper form{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .radio-wrap {
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+        /* justify-content: start; */
+        /* align-items: start; */
+        row-gap: 10px;
+    }
+    .radio-wrap label{
+        width: 100px;
+    }
+    .wrapper form button{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

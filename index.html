@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказы компании перевозок</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <details>
+                <summary>
+                    <input type="text" name="manager" placeholder="Имя менеджера" id="manager" readonly>
+                </summary>
+                <ol class="select" data-id="manager">
+                    <li>Петров Петр Петрович</li>
+                    <li>Иван Иванович Иванов</li>
+                </ol>
+            </details>
+
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="text" name="from" placeholder="Откуда" required>
+            <input type="text" name="to" placeholder="Куда" required>
+            <p class="radio-block-title">Выберите вид отправления: </p>
+            <div class="radio-wrap">
+                <label>
+                    <img src="./img/email.png" alt="">
+                    Письмо
+                    <input type="radio" name="typePackage" value="Письмо" id="typePackage1">
+                </label>
+                
+                <label>
+                    <img src="./img/box.png" alt="">
+                    Посылка
+                    <input type="radio" name="typePackage" value="Посылка" id="typePackage2">
+                </label>
+                
+                <label>
+                    <img src="./img/postcard.png" alt="">
+                    Открытка
+                    <input type="radio" name="typePackage" value="Открытка" id="typePackage3">
+                </label>
+                
+                <label>
+                    <img src="./img/print-paper.png" alt="">
+                    Бандероль
+                    <input type="radio" name="typePackage" value="Бандероль" id="typePackage4">
+                </label>
+            </div>
+            <div class="checkbox">
+                <label for="important">Ценное</label>
+                <input type="checkbox" name="important" id="important">
+            </div>
+            <!-- <textarea name="check" id="check">Подтвердите заказ</textarea> -->
+            <button>Сформировать заказ</button>
+
+            <!-- TODO: откуда, куда, вид поссылки, вес, способ доставки -->
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
